@@ -1,0 +1,50 @@
+{
+  "be8bff41e51e26e1d12161ee813b205f717533f3": {
+    "parents": [
+      "de704f6bf21be286dab3484364c396c49203e3bf"
+    ],
+    "subject": "D",
+    "ref_names": "HEAD -> feat-1",
+    "refs": [
+      {
+        "objectname": "be8bff41e51e26e1d12161ee813b205f717533f3",
+        "objecttype": "commit",
+        "refname": "refs/heads/feat-1",
+        "subject": "D",
+        "type": "heads",
+        "name": "feat-1",
+        "points-at": "be8bff41e51e26e1d12161ee813b205f717533f3"
+      }
+    ]
+  },
+  "d49de8ed78429319c73d0df9085948785dd43d68": {
+    "parents": [
+      "be21ba6e0058f4cba46e9ae5487c2c14086eb1ec"
+    ],
+    "subject": "B",
+    "ref_names": "main",
+    "refs": [
+      {
+        "objectname": "d49de8ed78429319c73d0df9085948785dd43d68",
+        "objecttype": "commit",
+        "refname": "refs/heads/main",
+        "subject": "B",
+        "type": "heads",
+        "name": "main",
+        "points-at": "d49de8ed78429319c73d0df9085948785dd43d68"
+      }
+    ]
+  },
+  "de704f6bf21be286dab3484364c396c49203e3bf": {
+    "parents": [
+      "d49de8ed78429319c73d0df9085948785dd43d68"
+    ],
+    "subject": "C",
+    "ref_names": ""
+  },
+  "be21ba6e0058f4cba46e9ae5487c2c14086eb1ec": {
+    "parents": [],
+    "subject": "A",
+    "ref_names": ""
+  }
+}

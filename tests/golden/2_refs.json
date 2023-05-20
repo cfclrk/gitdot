@@ -1,0 +1,38 @@
+[
+  {
+    "objectname": "980fd5ad4a41e4fdc11043b52808c36c58644bff",
+    "objecttype": "commit",
+    "refname": "refs/heads/B1",
+    "subject": "C",
+    "type": "heads",
+    "name": "B1",
+    "points-at": "980fd5ad4a41e4fdc11043b52808c36c58644bff"
+  },
+  {
+    "objectname": "ffd55b6145d38adae6dbc51f028951f031775192",
+    "objecttype": "commit",
+    "refname": "refs/heads/B2",
+    "subject": "D",
+    "type": "heads",
+    "name": "B2",
+    "points-at": "ffd55b6145d38adae6dbc51f028951f031775192"
+  },
+  {
+    "objectname": "06b18042a9dfa58095302da433eedaea1385e3b5",
+    "objecttype": "commit",
+    "refname": "refs/heads/main",
+    "subject": "B",
+    "type": "heads",
+    "name": "main",
+    "points-at": "06b18042a9dfa58095302da433eedaea1385e3b5"
+  },
+  {
+    "objectname": "130b7e63919c0e194469cca25d7b6d28815555dd",
+    "objecttype": "tag",
+    "refname": "refs/tags/v0.0.1",
+    "subject": "Initial Release",
+    "type": "tags",
+    "name": "v0.0.1",
+    "points-at": "560b242260c14d83804020e3c7ac881588a9e8c6"
+  }
+]

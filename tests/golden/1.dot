@@ -1,0 +1,25 @@
+graph G {
+bgcolor=transparent;
+rankdir=LR;
+node [fontsize="14.0", style=filled];
+edge [arrowtail=normal, color=darkorange, dir=back];
+be8bf [color=bisque];
+de704 -- be8bf;
+subgraph  {
+rank=same;
+"feat-1" [color=lightblue, height=0.2, shape=box];
+be8bf -- "feat-1";
+}
+
+d49de [color=bisque];
+be21b -- d49de;
+subgraph  {
+rank=same;
+main [color=lightblue, height=0.2, shape=box];
+d49de -- main;
+}
+
+de704 [color=bisque];
+d49de -- de704;
+be21b [color=bisque];
+}

@@ -1,0 +1,122 @@
+#+TITLE: gitdot
+
+Create a [[https://graphviz.org/][graphviz dot]] diagram of a git repository.
+
+This program uses =git log= and =git for-each-ref= to collect information about
+a git repository, and then uses [[https://github.com/pydot/pydot][pydot]] to create a dot diagram.
+
+* Options
+
+  - =-o= Write output to a file instead of writing to stdout. Using =-o= is
+    equivalent to =gitdot > $FILENAME= when you have a shell.
+
+  - =--msg= Use commit messages (instead of short commit hashes) as node names.
+
+  - =--png= Output a PNG image instead of graphviz dot code. Use this with =-o=
+    or =>= shell redirection to save the image to a file.
+
+  - =--theme= A color scheme to use when creating images.
+
+  - =--log-opts= Extra options/arguments to pass to the =git log= command. E.g.
+    =--log-opts foo bar ^baz= shows commits which are reachable from =foo= or
+    =bar= but not =baz=. See: =git help log=.
+
+* Examples
+
+** Example 1
+
+   A simple start.
+
+   #+header: :dir (org-outline-tempdir 'empty) :mkdirp yes
+   #+begin_src bash :results silent
+     git init
+     touch A && git add A && git commit -m "A"
+     touch B && git add B && git commit -m "B"
+     touch C && git add C && git commit -m "C"
+     touch D && git add D && git commit -m "D"
+   #+end_src
+
+   #+NAME: readme1
+   #+header: :results file :file-ext png
+   #+header: :output-dir (f-join (f-parent (f-this-file)) "examples")
+   #+header: :dir (org-outline-tempdir)
+   #+begin_src sh :exports both
+     gitdot --png --msg
+   #+end_src
+
+   #+RESULTS: readme1
+   [[file:examples/readme1.png]]
+
+** Example 2
+
+   Branches and tags.
+
+   #+header: :dir (org-outline-tempdir 'empty) :mkdirp yes
+   #+begin_src sh :results silent
+     git init
+     touch A && git add A && git commit -m "A"
+     touch B && git add B && git commit -m "B"
+     git tag -a "v0.0.1" -m "First release"
+     git checkout -b Branch1
+     touch C && git add C && git commit -m "C"
+     git checkout main
+     touch D && git add D && git commit -m "D"
+   #+end_src
+
+   #+NAME: readme2
+   #+header: :results file :file-ext png
+   #+header: :output-dir (f-join (f-parent (f-this-file)) "examples")
+   #+header: :dir (org-outline-tempdir)
+   #+begin_src sh :exports both
+     gitdot --png --msg
+   #+end_src
+
+   #+RESULTS: readme2
+   [[file:examples/readme2.png]]
+
+** Example 3
+
+   With a merge.
+
+   #+header: :dir (org-outline-tempdir 'empty) :mkdirp yes
+   #+begin_src sh :results silent
+     git init
+     touch A && git add A && git commit -m "A"
+     touch B && git add B && git commit -m "B"
+     git tag -a "v0.0.1" -m "First release"
+     git checkout -b B1
+     touch C && git add C && git commit -m "C"
+     git checkout main
+     git merge B1 --no-ff -m "E"
+   #+end_src
+
+   #+NAME: readme3
+   #+header: :results file :file-ext png
+   #+header: :output-dir (f-join (f-parent (f-this-file)) "examples")
+   #+header: :dir (org-outline-tempdir)
+   #+begin_src sh :exports both
+     gitdot --png --msg
+   #+end_src
+
+   #+RESULTS: readme3
+   [[file:examples/readme3.png]]
+
+* Development
+
+  Install project with test dependencies:
+
+  #+begin_src sh
+    make dev
+  #+end_src
+
+  Run all tests:
+
+  #+begin_src sh
+    make test
+  #+end_src
+
+  Regenerate golden test files:
+
+  #+begin_src sh
+    python tests/regenerate_golden_files.py
+  #+end_src

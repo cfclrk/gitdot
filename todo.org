@@ -1,0 +1,37 @@
+* TODO
+
+** log
+
+   Bug: double quotes in any log message will definitely break things.
+
+** tests
+
+   - test_main should compare dot graph to golden dot graph. Maybe, use
+     networkx?
+
+   - Add a "command" input file to each test with the full gitdot command to run
+     for the test. test_git.py should run argparse to pull out the --log-opt and
+     --refs parts.
+
+   - How should main test work? Open image only if running one test?
+
+   - Add test with remote refs. Style remotes differently.
+
+** refs
+
+   - Make a =--refs= flag to customize git for-each-ref patterns.
+
+   - Make a test that uses =git update-ref= to create some weird refs, like
+     =refs/foo/bar/moo=.
+
+** dot
+
+   - Display nodes in a more git-like way. Ideas:
+
+     - Any cluster of nodes with indegree=1 and outdegree=1 should be in a
+       straight horizontal line (i.e. a subgraph).
+
+     - Everything in =git config init.defaultBranch= should be in a straight line.
+
+     - Everything in the current branch is in a straight line. (Nah...
+       defaultBranch seems more natural).

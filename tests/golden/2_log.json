@@ -1,0 +1,28 @@
+{
+  "980fd5ad4a41e4fdc11043b52808c36c58644bff": {
+    "parents": [
+      "06b18042a9dfa58095302da433eedaea1385e3b5"
+    ],
+    "subject": "C",
+    "ref_names": "B1"
+  },
+  "ffd55b6145d38adae6dbc51f028951f031775192": {
+    "parents": [
+      "06b18042a9dfa58095302da433eedaea1385e3b5"
+    ],
+    "subject": "D",
+    "ref_names": "HEAD -> B2"
+  },
+  "06b18042a9dfa58095302da433eedaea1385e3b5": {
+    "parents": [
+      "560b242260c14d83804020e3c7ac881588a9e8c6"
+    ],
+    "subject": "B",
+    "ref_names": "main"
+  },
+  "560b242260c14d83804020e3c7ac881588a9e8c6": {
+    "parents": [],
+    "subject": "A",
+    "ref_names": "tag: v0.0.1"
+  }
+}

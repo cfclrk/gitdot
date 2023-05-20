@@ -1,0 +1,69 @@
+{
+  "fb39b9bcf49d7862ce15f22ab73fb65e9bd2e33c": {
+    "parents": [
+      "d599a3ccfe716727ede8c27d112afd4bd752cee9"
+    ],
+    "subject": "D",
+    "ref_names": "B1",
+    "refs": [
+      {
+        "objectname": "fb39b9bcf49d7862ce15f22ab73fb65e9bd2e33c",
+        "objecttype": "commit",
+        "refname": "refs/heads/B1",
+        "subject": "D",
+        "type": "heads",
+        "name": "B1",
+        "points-at": "fb39b9bcf49d7862ce15f22ab73fb65e9bd2e33c"
+      }
+    ]
+  },
+  "3f6a70b2918eeb0a91e68cb5525d3da27dc5471c": {
+    "parents": [
+      "06b18042a9dfa58095302da433eedaea1385e3b5",
+      "fb39b9bcf49d7862ce15f22ab73fb65e9bd2e33c"
+    ],
+    "subject": "E",
+    "ref_names": "HEAD -> main",
+    "refs": [
+      {
+        "objectname": "3f6a70b2918eeb0a91e68cb5525d3da27dc5471c",
+        "objecttype": "commit",
+        "refname": "refs/heads/main",
+        "subject": "E",
+        "type": "heads",
+        "name": "main",
+        "points-at": "3f6a70b2918eeb0a91e68cb5525d3da27dc5471c"
+      }
+    ]
+  },
+  "d599a3ccfe716727ede8c27d112afd4bd752cee9": {
+    "parents": [
+      "06b18042a9dfa58095302da433eedaea1385e3b5"
+    ],
+    "subject": "C",
+    "ref_names": ""
+  },
+  "560b242260c14d83804020e3c7ac881588a9e8c6": {
+    "parents": [],
+    "subject": "A",
+    "ref_names": "tag: v0.0.1",
+    "refs": [
+      {
+        "objectname": "130b7e63919c0e194469cca25d7b6d28815555dd",
+        "objecttype": "tag",
+        "refname": "refs/tags/v0.0.1",
+        "subject": "Initial Release",
+        "type": "tags",
+        "name": "v0.0.1",
+        "points-at": "560b242260c14d83804020e3c7ac881588a9e8c6"
+      }
+    ]
+  },
+  "06b18042a9dfa58095302da433eedaea1385e3b5": {
+    "parents": [
+      "560b242260c14d83804020e3c7ac881588a9e8c6"
+    ],
+    "subject": "B",
+    "ref_names": ""
+  }
+}
